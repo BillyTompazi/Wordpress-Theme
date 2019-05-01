@@ -1,0 +1,36 @@
+/*
+Theme Name: Wordpress Theme1
+Theme URI: https://vtompazis-portfolio.glitch.me/
+Author: Billy
+Author URI: https://vtompazis-portfolio.glitch.me/
+Description: Simple Bootstrap Wordpress Theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vtompazis
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.my-nav{background:rgba(0,0,0,0) !important;z-index:1}.my-nav .navbar-brand{display:flex;justify-content:center;align-items:baseline;margin-left:167px}.my-nav .navbar-brand .logo{margin-right:5px}.my-nav .my-ul{width:100%;margin-right:120px !important}.my-nav .nav-item .nav-link{color:white !important;margin:0 20px 0 20px}.my-nav .custom-toggler.navbar-toggler-icon{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")}.green-color{color:#28E7A8}.toggle-background{background:gray !important}html,body{margin:0;padding:0;max-width:100%;box-sizing:border-box}.photo-container{margin:0 auto;padding:0 0;position:relative;top:-60px}.photo-container .background-photo{width:100%;height:550px;object-fit:cover}.image-content{position:absolute;top:100px;margin-left:167px;color:white}.image-content h2{font-family:'Raleway', sans-serif;margin-bottom:15px}.image-content p{font-family:'Raleway', sans-serif;margin-bottom:45px}.image-content .app-store{margin-right:18px}.jumbotron-container{width:80%;padding-bottom:80px}.jumbotron-container p{margin:0 auto;font-family:"Raleway";font-size:22px;width:80%;margin-bottom:20px}.jumbotron-container .circle-container{position:relative}.jumbotron-container .circle-container .circle{margin:0 auto;width:150px;height:150px;border-radius:50%;background:#F2F2F2}.jumbotron-container .circle-container .circle img{margin:45px auto;width:60px;height:60px}.jumbotron-container .circle-container p{font-family:"Raleway";font-size:14px;margin-top:20px}.jumbotron-container .arrow{margin-top:60px;width:60px;height:50px;position:absolute;top:0;margin-left:170px}.jumbotron-price-container{background:#373737;padding:20px 100px 100px 100px}.jumbotron-price-container p{color:white;font-family:"Raleway";font-weight:bold;font-size:22px;padding-top:50px}.jumbotron-price-container .price-container p{color:#28E7A8;font-weight:400}.jumbotron-price-container .price-container table td{border:none;color:white}.jumbotron-price-container .price-container table tr:nth-child(odd){background:#4F4F4F}.jumbotron-price-container .price-container table tr:nth-child(even){background:#979797}.jumbotron-price-container .price-container img{position:absolute;top:230px}#map{height:500px;width:100%;margin-top:-15px}.footer{padding:20px;background:#373737;color:white}.footer p{font-size:14px;font-family:"Raleway"}.footer .footer-logo{display:flex;justify-content:center;align-items:baseline}.footer .footer-logo p{font-size:20px;margin-left:10px}@media (max-width: 1266px){.my-nav .navbar-brand{margin-left:0}.image-content{margin-left:0}.circle-container .arrow{margin-left:130px}}@media (max-width: 992px){.my-nav .my-ul{width:100%;margin-right:0 !important}.jumbotron-container{width:100%}.jumbotron-container .arrow{margin-left:100px}.jumbotron-price-container{padding:20px 20px 100px 20px}}@media (max-width: 768px){.circle-container .arrow{display:none}}@media (max-width: 576px){.image-content p{display:none}.image-content .app-store{display:block}.image-content .android-store{margin-top:10px}}
+
+.my-nav.scrolled {
+    background: rgba(0, 0, 0, 0.7) !important;
+    transition: background-color 200ms linear;
+}
+
+.my-nav {
+  position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.toggle-nav {
+  background: black !important;
+}
+
+.image-content {
+  margin-top: 60px;
+}
