@@ -18,11 +18,19 @@
     </head>
     <body>
         <nav class="my-nav navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="http://localhost/Wordpress_theme/">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/cup-of-hot-chocolate.png" class="img-fluid logo"/>
-                <span>Coffee</span>
-                <span class="green-color">Drop</span>
-            </a>
+
+              <?php
+              // Display the Custom Logo
+              the_custom_logo();
+
+              // No Custom Logo, just display the site's name
+              if (!has_custom_logo()) {
+                  ?>
+                  <h3><?php bloginfo('name'); ?></h3>
+                  <?php
+              }
+              ?>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="custom-toggler navbar-toggler-icon"></span>
             </button>
