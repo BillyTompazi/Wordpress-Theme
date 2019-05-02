@@ -45,5 +45,36 @@ function wpb_init_widgets($id) {
 
 add_action('widgets_init', 'wpb_init_widgets');
 
+//Support of Custom Logo
+function mytheme_setup() {
+    add_theme_support('custom-logo');
+}
+
+add_image_size('mytheme-logo', 160, 90);
+add_theme_support('custom-logo', array(
+    'size' => 'mytheme-logo'
+));
+
+
+add_action('after_setup_theme', 'mytheme_setup');
+
+//Extra support
+add_filter( 'show_admin_bar', '__return_false' );
+
+add_action( 'after_setup_theme', 'cd_setup' );
+function cd_setup() {
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+
+}
+
 //Customizer File
 require get_template_directory(). '/inc/customizer.php';
