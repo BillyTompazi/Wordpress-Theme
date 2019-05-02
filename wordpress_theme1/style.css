@@ -34,3 +34,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .image-content {
   margin-top: 60px;
 }
+
+.custom-logo-link {
+  margin-left: 167px;
+}
+
+@media (max-width: 1266px) {
+  .custom-logo-link {
+    margin-left: 0;
+  }
+}
