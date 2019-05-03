@@ -1,10 +1,8 @@
-<footer>
+<footer class="main-footer">
     <div class="container-fluid text-center footer">
-        <p>This app is powered by </p>
+        <p><?php echo get_theme_mod('footer_text', 'This app is powered by'); ?> </p>
         <div class="footer-logo">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/cup-of-hot-chocolate.png"/>
-            <p>
-            CoffeDrop </p>
+            <img src="<?php echo get_theme_mod('footer_image', get_bloginfo('template_url').'/img/Group2@2x.png'); ?>"/>
         </div>
     </div>
 </footer>
