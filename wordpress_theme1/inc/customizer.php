@@ -54,6 +54,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'back
 	'section'    => 'cd_colors',
 	'settings'   => 'background_color',
 ) ) );
+
 }
 
 //Apply the functionality of Colors section
@@ -63,9 +64,45 @@ function cd_customizer_css()
     ?>
          <style type="text/css">
              body { background: #<?php echo get_theme_mod('background_color', '#FFFFFF'); ?>; }
+             .main-footer { background: #<?php echo get_theme_mod('background_color', '#373737'); ?>; }
          </style>
     <?php
 }
 
+
+
+function wpb_customize_footer($wp_customize){
+  // Footer Section
+  $wp_customize->add_section('footer', array(
+    'title'   => __('Footer', 'wpbootstrap'),
+    'description' => sprintf(__('Options for Footer','wordpress_theme1')),
+    'priority'    => 130
+  ));
+  $wp_customize->add_setting('footer_image', array(
+    'default'   => get_bloginfo('template_directory').'/img/Group2@2x.png',
+    'type'      => 'theme_mod'
+  ));
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image', array(
+    'label'   => __('Footer Image', 'wordpress_theme1'),
+    'section' => 'footer',
+    'settings' => 'footer_image',
+    'priority'  => 2
+  )));
+
+  $wp_customize->add_setting('footer_text', array(
+    'default'   => _x('This app is powered by', 'wordpress_theme1'),
+    'type'      => 'theme_mod'
+  ));
+  $wp_customize->add_control('footer_text', array(
+    'label'   => __('Text', 'wordpress_theme1'),
+    'section' => 'footer',
+    'priority'  => 1
+  ));
+
+}
+
+
+
   add_action('customize_register', 'cd_customizer_settings');
   add_action('customize_register', 'wpb_customize_register');
+  add_action('customize_register', 'wpb_customize_footer');
